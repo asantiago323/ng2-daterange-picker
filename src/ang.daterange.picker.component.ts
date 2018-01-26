@@ -14,6 +14,7 @@ export class DaterangePickerComponent implements OnInit {
   public startDateText: string = '';
   public endDateText: string = '';
   private selfComponentRef: ComponentRef<any>;
+  public error;
 
   @Output() onCloseDaterangePicker: EventEmitter<any> = new EventEmitter<any>();
   @Output() onSelectedDaterange: EventEmitter<any> = new EventEmitter<any>();
@@ -29,14 +30,19 @@ export class DaterangePickerComponent implements OnInit {
 
   }
 
-  onSelectStartDate($event: any) {
+  onSelectStartDate($event) {
     this.startDate = $event.date;
     this.startDateText = $event.dateText;
   }
 
-  onSelectEndDate($event: any) {
+  onSelectEndDate($event) {
     this.endDate = $event.date;
     this.endDateText = $event.dateText;
+    if (this.endDate < this.startDate) {
+      this.error = 'Fix your End Date!';
+    } else {
+      this.error = '';
+    }
   }
 
   onApplySelectedDateRange() {
