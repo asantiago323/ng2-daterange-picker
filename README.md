@@ -60,3 +60,4 @@ export class MyComponent {
 
 ### License
 MIT
+Added validations and minor tweaks for use in custom app. Hosting this version for personal needs.
