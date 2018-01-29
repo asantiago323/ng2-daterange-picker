@@ -1,7 +1,7 @@
 {
-  "name": "ng2-daterange-picker",
-  "version": "1.0.8",
-  "author": "Albert Nadal Garriga",
+  "name": "ng2-datepicker",
+  "version": "1.0.9",
+  "author": "Anthony Santiago",
   "license": "MIT",
   "keywords": [
     "angular2",
@@ -59,7 +59,7 @@
     "ngc": "node_modules/.bin/ngc -p tsconfig-aot.json"
   },
   "dependencies": {
-    "@angular/material": "5.0.0",
+    "@angular/material": "4.0.0",
     "moment": "^2.17.1",
     "rxjs": "^5.0.0"
   }
