@@ -21,13 +21,14 @@
             <td>
               <md-input-container style="width:100%">
                 <input mdInput disabled value="" [(ngModel)]="endDateText">
-                <md-hint *ngIf="this.error">
+                <md-hint *ngIf="this.error" style="color: red;">
                   The End Date can not come before the Start Date.
                 </md-hint>
               </md-input-container>
             </td>
           </tr>
         </table>
+        <br>
         <div style="bottom:0px;">
           <table style="width:100%">
             <tr>
