@@ -21,9 +21,9 @@
             <td>
               <md-input-container style="width:100%">
                 <input mdInput disabled value="" [(ngModel)]="endDateText">
-                <!-- <md-error *ngIf="error == true">
-                  Your End Date <strong>should not come before your</strong> Start Date!
-                </md-error> -->
+                <md-error *ngIf="this.error">
+                  The End Date can not come before the Start Date.
+                </md-error>
               </md-input-container>
             </td>
           </tr>
@@ -47,8 +47,6 @@
           </table>
         </div>
       </div>
-
-    <input id="error" value="{{error}}" style="color: red; border: none;">
       <div style="margin-left:180px">
         <ang-datepicker [(date)]="startDate"
                         (onSelect)="onSelectStartDate($event)"
@@ -63,6 +61,5 @@
                         [startDate]="startDate">
         </ang-datepicker>
       </div>
-      
     </md-card>
 </div>
