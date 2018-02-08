@@ -33,12 +33,18 @@ export class DaterangePickerComponent implements OnInit {
   onSelectStartDate($event) {
     this.startDate = $event.date;
     this.startDateText = $event.dateText;
+    this.checkDates();
   }
 
   onSelectEndDate($event) {
     this.endDate = $event.date;
     this.endDateText = $event.dateText;
-    if (this.endDate < this.startDate) {
+    this.checkDates();
+  }
+
+  checkDates() {
+    if (this.startDateText !== '' && this.endDate < this.startDate) {
+      // disables the Apply button and displays message
       this.error = true;
     } else {
       this.error = false;
